@@ -101,3 +101,15 @@ body[data-vscode-theme-kind="vscode-light"] #vditor[data-editor-theme="Auto"] .v
 body[data-vscode-theme-kind="vscode-dark"] #vditor[data-editor-theme="Auto"] .vditor-content .vditor-outline {
     filter: brightness(110%);
 }
+
+/* Mermaid labels render inside SVG/foreignObject; keep them from inheriting editor/code backgrounds. */
+.vditor-content .language-mermaid svg foreignObject,
+.vditor-content .language-mermaid svg foreignObject *,
+.vditor-content .language-mermaid svg .label,
+.vditor-content .language-mermaid svg .nodeLabel,
+.vditor-content .language-mermaid svg .edgeLabel,
+.vditor-content .language-mermaid svg .cluster-label,
+.vditor-content .language-mermaid svg .labelBkg {
+    background-color: transparent !important;
+}
+
