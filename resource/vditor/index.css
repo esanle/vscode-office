@@ -50,12 +50,12 @@ html {
     width: 100% !important;
 }
 
-/* Keep markdown tables within the editor width and wrap cell text instead of horizontal scrolling. */
+/* Let markdown tables size to content, but keep oversized tables within the editor width. */
 .vditor-reset table {
     display: table !important;
-    width: 100% !important;
+    width: auto !important;
     max-width: 100% !important;
-    table-layout: fixed !important;
+    table-layout: auto !important;
     overflow: visible !important;
     word-break: normal !important;
 }
