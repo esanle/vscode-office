@@ -2,7 +2,7 @@
 	"name": "vscode-office-pro",
 	"displayName": "Office Suite Viewer",
 	"description": "Preview Word, Excel, PDF, Markdown, and more in VS Code. Compare Excel/CSV with VCS revisions, cell-level blame, 3-way merge editor, TortoiseSVN/Git integration, self-contained HTML export, and Mermaid v11 diagrams.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "haroldcc",
 	"icon": "images/logo-pro.png",
 	"engines": {
