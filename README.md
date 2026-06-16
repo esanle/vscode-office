@@ -6,7 +6,12 @@ Preview Word, Excel, PDF, Markdown, and more directly in VS Code. Compare Excel/
 
 > Forked from [cweijan/vscode-office](https://github.com/cweijan/vscode-office), originally maintained by [RJ.Wang](https://github.com/rjwang1982), now maintained by [haroldcc](https://github.com/haroldcc).
 
-This extension is a maintained fork with major enhancements in VCS integration, diff/merge tooling, and robustness, on top of the prior improvements by RJ.Wang.
+This extension is a maintained fork focused on practical Office/Markdown workflows in VS Code. In addition to the earlier work by RJ.Wang, this fork mainly improves:
+
+- Markdown preview/editor layout, including content-sized tables, automatic cell wrapping, and less unnecessary horizontal scrolling.
+- Mermaid rendering reliability, including a bundled local Mermaid runtime, pinned export fallback, and theme-safe label rendering.
+- Office diff/merge workflows, including revision diff, 3-way merge, and cell-level blame tooling for xlsx/csv.
+- Overall robustness for real-world files, such as encoding handling, CSV delimiter detection, and large-sheet loading behavior.
 
 ## What's new in this fork
 
@@ -40,7 +45,9 @@ This extension is a maintained fork with major enhancements in VCS integration, 
 
 ### Editor Experience (inherited and enhanced)
 - **Self-Contained HTML Export** — Local images embedded as Base64, fully portable single-file HTML.
-- **Mermaid v11 Support** — Upgraded from v8.8.0 to v11.14.0 with local loading for offline reliability.
+- **Mermaid v11 Support** — Upgraded from v8.8.0 to v11.15.0 with local loading for offline reliability.
+- **Better Markdown Tables** — Tables size to content when possible, stay within the editor width, and wrap long cell text instead of forcing horizontal scrolling.
+- **Mermaid Theme Fixes** — Mermaid labels no longer inherit black/white background blocks from editor theme styles.
 - **Configurable Editor Mode** — WYSIWYG, Instant Rendering, or Split View (`vscode-office.editorMode`).
 - **Cleaner Rendering** — Content fills available editor width, left-aligned layout.
 - **Smaller Package** — Removed bundled Icon Theme and Java Decompiler (~4.4 MB saved), optimized to ~5.25 MB.

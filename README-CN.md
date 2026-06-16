@@ -6,7 +6,12 @@
 
 > Fork 自 [cweijan/vscode-office](https://github.com/cweijan/vscode-office)，原由 [RJ.Wang](https://github.com/rjwang1982) 维护，现由 [haroldcc](https://github.com/haroldcc) 维护。
 
-本扩展在原项目基础上进行了 VCS 集成、Diff/Merge 工具链以及整体健壮性方面的大量增强，同时继承了 RJ.Wang 的既有改进。
+本扩展是一个持续维护中的 Fork，重点优化 VS Code 中实际使用频率最高的 Office/Markdown 工作流。在继承 RJ.Wang 既有改进的基础上，这个 Fork 主要增强了：
+
+- Markdown 预览/编辑布局：表格按内容自适应宽度、单元格自动换行、尽量减少不必要的横向滚动。
+- Mermaid 渲染稳定性：内置本地 Mermaid 运行时、导出时固定 fallback 版本，并修复不同主题下标签文字的背景异常。
+- Office Diff/Merge 工作流：支持版本对比、三方合并、xlsx/csv 单元格级 Blame 等能力。
+- 面向真实文件的健壮性：包括编码处理、CSV 分隔符自动识别、大型工作表按需加载等。
 
 ## 本 Fork 的新功能
 
@@ -40,7 +45,9 @@
 
 ### 编辑器体验（继承并增强）
 - **独立 HTML 导出** — 本地图片自动转换为 Base64 内嵌，导出文件完全独立可分享。
-- **Mermaid v11 支持** — 从 v8.8.0 升级到 v11.14.0，本地加载，离线更稳定。
+- **Mermaid v11 支持** — 从 v8.8.0 升级到 v11.15.0，本地加载，离线更稳定。
+- **更好的 Markdown 表格体验** — 表格会尽量按内容宽度显示，超出编辑器时限制在可用宽度内，并让长文本自动换行。
+- **Mermaid 主题渲染修复** — Mermaid 图中的标签文字不再继承编辑器主题带来的黑/白色背景块。
 - **可配置编辑模式** — WYSIWYG、即时渲染、分屏视图（`vscode-office.editorMode`）。
 - **更清爽的渲染效果** — 内容铺满编辑器可用宽度，左对齐布局。
 - **更小的安装包** — 移除内置 Icon Theme 和 Java Decompiler（约 4.4 MB），优化至约 5.25 MB。

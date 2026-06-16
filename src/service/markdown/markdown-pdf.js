@@ -35,7 +35,7 @@ async function convertMarkdown(inputMarkdownFile, config) {
           // fallback to CDN if local file not found
           console.warn('[pretty-md-pdf] Local mermaid.min.js not found, falling back to CDN');
           mermaidScript = `
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     `;
       }
