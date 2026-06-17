@@ -4,7 +4,7 @@
 
 ## Office Viewer（Fork）
 
-> Fork 自 [cweijan/vscode-office](https://github.com/cweijan/vscode-office)，原由 [RJ.Wang](https://github.com/rjwang1982) 维护，现由 [haroldcc](https://github.com/haroldcc) 维护。
+> Fork 自 [HaroldCC/vscode-office](https://github.com/HaroldCC/vscode-office)。本 Fork 保留上游项目致谢，并在此说明当前维护分支的具体改动。
 
 本扩展是一个持续维护中的 Fork，重点优化 VS Code 中实际使用频率最高的 Office/Markdown 工作流。在继承 RJ.Wang 既有改进的基础上，这个 Fork 主要增强了：
 

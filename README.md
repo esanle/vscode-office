@@ -4,7 +4,7 @@ Preview Word, Excel, PDF, Markdown, and more directly in VS Code. Compare Excel/
 
 ## Office Viewer (Fork)
 
-> Forked from [cweijan/vscode-office](https://github.com/cweijan/vscode-office), originally maintained by [RJ.Wang](https://github.com/rjwang1982), now maintained by [haroldcc](https://github.com/haroldcc).
+> Forked from [HaroldCC/vscode-office](https://github.com/HaroldCC/vscode-office). This fork keeps upstream attribution while documenting the changes maintained here.
 
 This extension is a maintained fork focused on practical Office/Markdown workflows in VS Code. In addition to the earlier work by RJ.Wang, this fork mainly improves:
 
