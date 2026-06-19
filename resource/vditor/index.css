@@ -2,7 +2,7 @@ body {
     padding: 0;
 }
 
-.vditor * {
+.vditor *:not(.katex):not(.katex *) {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", sans-serif;
 }
 

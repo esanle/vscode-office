@@ -226,8 +226,14 @@ function readStyles() {
     const basePath = path.join(__dirname, "styles");
     const katexPath = path.resolve(__dirname, '..', "resource", 'vditor', 'dist', 'js', 'katex', 'katex.min.css');
     const files = ['arduino-light.css', 'markdown.css', 'markdown-pdf.css']
-    return files.map(file => makeCss(path.join(basePath, file))).join("")
-      + makeCss(katexPath)
+    const baseStyles = files.map(file => makeCss(path.join(basePath, file))).join("")
+    // KaTeX CSS is inlined into the exported HTML <style>. The relative url(fonts/...)
+    // would resolve against the temp HTML's directory (origin dir / tmpdir), where the
+    // bundled fonts do not exist — so KaTeX fonts silently fail to load in PDF/HTML
+    // export and math (e.g. \ne) renders broken. Rewrite to absolute file:// URLs.
+    const katexFontsUrl = url.pathToFileURL(path.join(path.dirname(katexPath), "fonts")).href
+    const katexCss = readFile(katexPath).replace(/url\(\s*fonts\//g, `url(${katexFontsUrl}/`)
+    return baseStyles + "\n<style>\n" + katexCss + "\n</style>\n"
   } catch (error) {
     showErrorMessage("readStyles()", error)
   }
